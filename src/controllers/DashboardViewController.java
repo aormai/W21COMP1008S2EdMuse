@@ -35,6 +35,9 @@ public class DashboardViewController  implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         studentsListView.getItems().addAll(DBUtility.getStudentsFromDB());
         studentsLabel.setText(String.format("Students: %d", studentsListView.getItems().size()));
+
+        professorsListView.getItems().addAll(DBUtility.getProfessorsFromDB());
+        professorsLabel.setText(String.format("Professors: %d", professorsListView.getItems().size()));
     }
 
 }
